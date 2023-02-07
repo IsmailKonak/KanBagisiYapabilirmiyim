@@ -25,7 +25,7 @@ const questions = [
 "Son 12 ay içerisinde dövme, hacamat yaptırdınız mı?",
 "Son 12 ay içerisinde hayvan ısırığı nedeni ile kuduz aşısı oldunuz mu?",
 "Son ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
-"Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi veya son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı",
+"Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi veya son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
 "Son birkaç gün içerisinde ağız ve diş ile ilgili bir operasyon geçirdiniz mi? (dolgu,çekim,implant,diş/çene cerrahisi,apse drenajı)",
 "Son birkaç gün içerisinde baş ağrısı/dönmesi yaşadınız mı?",
 "Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
