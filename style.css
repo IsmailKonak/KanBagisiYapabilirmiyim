@@ -1,0 +1,31 @@
+body{
+    background-color:  #990F02;
+}
+
+.mygithub{
+  text-decoration:none;
+  color: black;
+  position:fixed;
+  font-size:small;
+  bottom:1%;
+  right:3%;
+  
+}
+.question_card{
+  position: fixed;
+top: 45%;
+left: 50%;
+width: 95%;
+transform: translate(-50%, -50%);
+}
+
+.btn_kan{
+    margin-top: 10%;
+    background-color: white;
+    color: red;
+    border: solid red;
+}
+.btn_kan:active{
+    background-color: red;
+    color: white;
+}
