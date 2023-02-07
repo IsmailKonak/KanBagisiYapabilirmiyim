@@ -8,14 +8,13 @@ const questions = [
 "Kanama/pıhtılaşma faktörleri ile ilgili değerleriniz normal referans aralığında mı?",
 "MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öykünüz var mı?",
 "Kronik bronşit, kronik böbrek ve karaciğer yetmezliğiniz var mı?",
-"Siroz, epilepsi gibi süregelen hastalıklara sahip misiniz?",
-"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomlarınız; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik gibi şikayetleriniz var mı?",
+"Siroz, epilepsi gibi süregelen hastalıklara sahip misiniz?",
+"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomlarınız; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik gibi şikayetleriniz var mı?",
 "Diyabet hastası mısınız?",
 "Otoimmün bir hastalığa sahip misiniz?",
-"Daha öncesinde hiç mide rezeksiyonu geçirdiniz mi?",
 "Hepatit B, Hepatit C, Sifiliz veya HIV (AIDS) geçmişiniz var mı?",
 "Kanser ve kemoterapi/radyoterapi öykünüz var mı?",
-"Son 4 hafta içerisinde Attenüe bakteri ve virüs aşısı (Suçiçeği, sarıhumma, kızamık, kızamıkçık, oral polio, kabakulak) yapıldı mı?",
+"Son 4 hafta içerisinde Attenüe bakteri ve virüs aşısı (Suçiçeği, sarıhumma, kızamık, kızamıkçık, oral polio, kabakulak) oldunuz mu?",
 "Son 1 hafta içerisinde Hepatit B aşısı oldunuz mu?",
 "Son 12 saat içerisinde alkol tükettiniz mi?",
 "Son 48 saat içerisinde antibiyotik aldınız mı?",
@@ -24,16 +23,15 @@ const questions = [
 "Son 12 ay içerisinde akupunktur, botoks, takı için cilt deldirme, saç ekimi veya estetik müdahaleler yaptırdınız mı?",
 "Son 12 ay içerisinde dövme, hacamat yaptırdınız mı?",
 "Son 12 ay içerisinde hayvan ısırığı nedeni ile kuduz aşısı oldunuz mu?",
-"Son ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
-"Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi veya son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
-"Son birkaç gün içerisinde ağız ve diş ile ilgili bir operasyon geçirdiniz mi? (dolgu,çekim,implant,diş/çene cerrahisi,apse drenajı)",
+"Son diare/ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
+"Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi?",
+"Son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
 "Son birkaç gün içerisinde baş ağrısı/dönmesi yaşadınız mı?",
 "Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
-"Son 6 ay içerisinde anemi (kansızlık) durumu ile karşı karşıya kaldınız mı?",
 "Son 12 ay içerisinde cerrahi bir operasyon geçirdiniz mi?",
 "Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?"
 ]
-const true_answers = [true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false,false];
+const true_answers = [true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
 
 const false_explanation = [
 "Kan bağışı yapmadan önce kendinizi iyi ve sağlıklı hissetmeniz gerekmektedir.",
@@ -41,13 +39,12 @@ const false_explanation = [
 "Kan bağışçısı adayı olabilmek için 50 kilogramın üzerinde olmanız gerekmektedir.",
 "Tam kan bağışında; erkekler 90 günde bir, kadınlar 120 günde bir kan bağışında bulunabilir.",
 "Kanama/pıhtılaşma faktörleri ile ilgili değerleriniz normal referans aralığının dışında olması durumunda kan bağışçısı olamazsınız.",
-"Kalp hastalıkları; Aort stenozu, Anevrizma,  Kardiyomyopati, Koroner tromboz. Kronik kalp yetmezliği, Aritmi (Ağır kardiak aritmi öyküsü veya tedavi gerektiren aritmi), Myokard enfarktüsü öyküsü, Kardiak stent takılması olanlar donör kabul edilmez.",
+"MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öyküsü olan hastalar donör kabul edilmez.",
 "Kronik bronşit,kronik böbrek ve karaciğer yetmezliğine sahip bireyler donör olarak kabul edilmezler.",
-"Siroz,epilepsi gibi süregelen hastalıklara sahip bireyler kan bağışçısı olamazlar.",
-"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomları; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik yaşamanız durumunda donör olmanız sakıncalıdır.",
+"Siroz,epilepsi gibi süregelen hastalıklara sahip bireyler kan bağışçısı olamazlar.",
+"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomları; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik yaşamanız durumunda donör olmanız tehlikeye girebilir, bu konuda uzmanlara danışınız.",
 "Diyabet(şeker hastalığı):İnsulin kullanıyorsa kan bağışçısı olamazlar",
-"Otoimmün hastalığı olanlar kan veremezler.",
-"Mide rezeksiyonu geçirenler, hiçbir zaman donör olamazlar.",
+"Otoimmün hastalığı olanlar kan bağışçısı olamazlar.",
 "Hepatit B, Hepatit C, Sifiliz veya HIV (AIDS) geçmişi olanlar hiçbir zaman donör olamazlar.",
 "Geçmişte kanser ve kemoterapi/radyoterapi öyküsü bulunan bireylerin kan vermesi sakıncalıdır.",
 "Attenüe bakteri ve virüs aşısı yapılmış olanlar: 4 hafta kan veremez.(Suçiçeği, sarıhumma, kızamık, kızamıkçık, oral polio, kabakulak) Ölü bakteri aşısı olanlar, kişi iyi ise kabul edilir.",
@@ -62,9 +59,8 @@ const false_explanation = [
 "Diyare-İshal: Tam iyileşme ve semptomların bitimini takiben 3 gün beklenir.",
 "Diş Tedavisi kaplama tedavisi, diş çekimi veya yapılan her türlü diş müdahaleleri sırasında kanama oluşmuşsa en az 7 gün süre ile kan bağışı ertelenir. Dolgu tedavisi ya da diş taşı temizliği gibi yüzeysel müdahalelerde kanama yoksa 1 gün süre ile kan bağışı ertelenir.",
 "Son birkaç gün içerisinde ağız ve diş ile ilgili bir operasyon geçiren bireyler donör olamazlar.",
-"Son 1 gün içerisinde tansiyon düşüklüğü ve bağlı semptomlar gösteren hastalar donör olamazlar.",
+"Son birkaç gün içerisinde tansiyon düşüklüğü ve bağlı semptomlar gösteren hastaların donörlüğü tehlikeye girebilir.",
 "Sıtma; Tedavinin sağlanmasından 3 yıl sonra kan verebilirler.",
-"Anemisi olan kişiler tedavi bitiminden 6 ay sonra kan verebilirler.",
 "Cerrahi: ameliyatlardan sonra 1 yıl boyunca kan bağışı alınmaz.",
 "Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar."
 ];
@@ -102,7 +98,7 @@ function nextquestion(answer){
     else{
         if (answer == true_answers[question_num-1]){
             update_page(question_num,"Evet","Hayır");
-            if (question_num == 18){
+            if (question_num == 17){
               document.getElementById("soru_aciklama").innerHTML = "Eğer son 2 hafta içerisinde ateş ve grip semptomları gösteren bir hastalık geçirmediyseniz 'Evet' e basabilirsiniz.";
             }
         }
