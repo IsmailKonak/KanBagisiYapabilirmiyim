@@ -83,9 +83,6 @@ function update_page(question_num,evet,hayir){
 //update_page(question_num);
 
 function nextquestion(answer){
-  console.log(questions.length);
-  console.log(false_explanation.length);
-  console.log(true_answers.length);
     if (question_num == 0){
         update_page(question_num,"Evet","Hayır")
     }
