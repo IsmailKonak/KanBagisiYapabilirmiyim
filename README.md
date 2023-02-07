@@ -12,5 +12,4 @@ https://www.kanbagisiyapabilirmiyim.net/
 <br>
 <br>
 
-### Yardımları için teşekkür ederim
-Ahmet Görgel - Uludağ Üniversitesi Tıp Fakültesi son sınıf öğrencisi
+Yardım ve katkıları için Ahmet Görgel ve Esra Konak'a teşekkür ederim
