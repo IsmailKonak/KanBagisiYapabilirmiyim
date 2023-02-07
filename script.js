@@ -44,7 +44,7 @@ const false_explanation = [
 "Kalp hastalıkları; Aort stenozu, Anevrizma,  Kardiyomyopati, Koroner tromboz. Kronik kalp yetmezliği, Aritmi (Ağır kardiak aritmi öyküsü veya tedavi gerektiren aritmi), Myokard enfarktüsü öyküsü, Kardiak stent takılması olanlar donör kabul edilmez.",
 "Kronik bronşit,kronik böbrek ve karaciğer yetmezliğine sahip bireyler donör olarak kabul edilmezler.",
 "Siroz,epilepsi gibi süregelen hastalıklara sahip bireyler kan bağışçısı olamazlar.",
-"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomları; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik yaşamanız donör olmanıza engel bir durumdur.",
+"Genel olarak tansiyon düşüklüğü ve buna bağlı semptomları; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik yaşamanız durumunda donör olmanız sakıncalıdır.",
 "Diyabet(şeker hastalığı):İnsulin kullanıyorsa kan bağışçısı olamazlar",
 "Otoimmün hastalığı olanlar kan veremezler.",
 "Mide rezeksiyonu geçirenler, hiçbir zaman donör olamazlar.",
