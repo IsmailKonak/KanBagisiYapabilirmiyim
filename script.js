@@ -43,7 +43,7 @@ const false_explanation = [
 "Otoimmün hastalığı olanlar kan bağışçısı olamazlar.",
 "Hepatit B, Hepatit C, Sifiliz veya HIV (AIDS) geçmişi olanlar hiçbir zaman donör olamazlar.",
 "Geçmişte kanser ve kemoterapi/radyoterapi öyküsü bulunan bireylerin kan vermesi sakıncalıdır.",
-"Alkol Kullanımı; Kan bağışçısı alkolün etkisinde olmamalıdır. Alkol alımını takiben 12 saat sonra kan verebilir.",
+"Alkol Kullanımı; kan bağışçısı alkolün etkisinde olmamalıdır. Alkol alımını takiben 12 saat sonra kan verebilir.",
 "Antibiyotik kullanımı: Son antibiyotik kullanımını takiben 48 saat sonra donör olabilir.",
 "Ateş, grip benzeri; 38 °C üstü ateşle giden grip benzeri tablolarda semptomların bitimini izleyen 2 hafta sonra kan bağışı kabul edilir.",
 "Kan, organ veya doku nakli yapılan hastalar nakilden 12 ay sonra tekrardan donör olabilirler. Kadavra kaynaklı doku-organ nakli: Böbrek, kalp, karaciğer ve her türlü kadavra doku ve organ nakli olanlar ise ömür boyu kan veremez.",
@@ -51,10 +51,10 @@ const false_explanation = [
 "Son 12 ay içerisinde dövme, hacamat yaptıran bireyler kan bağışında bulunamaz.",
 "Hayvan ısırıkları; evcil ve kuduz şüphesi olmayan hayvanlarda iyileşene kadar beklenir. Diğer hayvanlarda ise ısırığın üzerinden 12 ay geçene kadar beklenir. Kan bağışı sırasında yaranın iyileşmiş olması gereklidir. Kuduz aşısı olmuşsa 12 ay kan bağışçısı olamaz. Kuduz immünglobülini kullanmışsa 12 ay kan bağışçısı olamaz. Aşılama sonrası hayvanın kuduz olmadığı anlaşılırsa; kişi bağış için kabul edilir.",
 "Diyare-İshal: Tam iyileşme ve semptomların bitimini takiben 3 gün beklenir.",
-"Diş Tedavisi kaplama tedavisi, diş çekimi veya yapılan her türlü diş müdahaleleri sırasında kanama oluşmuşsa en az 7 gün süre ile kan bağışı ertelenir. Dolgu tedavisi ya da diş taşı temizliği gibi yüzeysel müdahalelerde kanama yoksa 1 gün süre ile kan bağışı ertelenir.",
+"Diş tedavisi kaplama tedavisi, diş çekimi veya yapılan her türlü diş müdahaleleri sırasında kanama oluşmuşsa en az 7 gün süre ile kan bağışı ertelenir. Dolgu tedavisi ya da diş taşı temizliği gibi yüzeysel müdahalelerde kanama yoksa 1 gün süre ile kan bağışı ertelenir.",
 "Son birkaç gün içerisinde ağız ve diş ile ilgili bir operasyon geçiren bireyler donör olamazlar.",
 "Son birkaç gün içerisinde tansiyon düşüklüğü ve bağlı semptomlar gösteren hastaların donörlüğü tehlikeye girebilir.",
-"Sıtma; Tedavinin sağlanmasından 3 yıl sonra kan verebilirler.",
+"Sıtma; tedavinin sağlanmasından 3 yıl sonra kan verebilirler.",
 "Cerrahi: ameliyatlardan sonra 1 yıl boyunca kan bağışı alınmaz.",
 "Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar."
 ];
@@ -97,7 +97,7 @@ function nextquestion(answer){
             }
         }
         else {
-            exit_page("Kan vermeye uygun değilsiniz",question_num-1);
+            exit_page("Kan bağışı yapmaya uygun değilsiniz",question_num-1);
         }
     }
     question_num +=1;
