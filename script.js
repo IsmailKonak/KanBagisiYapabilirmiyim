@@ -52,7 +52,7 @@ const false_explanation = [
 "Alkol Kullanımı; Kan bağışçısı alkolün etkisinde olmamalıdır. Alkol alımını takiben 12 saat sonra kan verebilir.",
 "Antibiyotik kullanımı: Son antibiyotik kullanımını takiben 48 saat sonra donör olabilir.",
 "Ateş, grip benzeri; 38 °C üstü ateşle giden grip benzeri tablolarda semptomların bitimini izleyen 2 hafta sonra kan bağışı kabul edilir.",
-"Kadavra kaynaklı doku-organ nakli: Böbrek, kalp, karaciğer ve her türlü kadavra doku ve organ nakli olanlar ömür boyu kan veremez.",
+"Kan, organ veya doku nakli yapılan hastalar nakilden 12 ay sonra tekrardan donör olabilirler. Kadavra kaynaklı doku-organ nakli: Böbrek, kalp, karaciğer ve her türlü kadavra doku ve organ nakli olanlar ise ömür boyu kan veremez.",
 "Son 12 ay içerisinde akupunktur, botoks, takı için cilt deldirme, saç ekimi veya estetik müdahaleler gibi müdahalelerde bulunulan kişiler kan bağışında bulunamaz",
 "Son 12 ay içerisinde dövme, hacamat yaptıran bireyler kan bağışında bulunamaz.",
 "Hayvan ısırıkları; evcil ve kuduz şüphesi olmayan hayvanlarda iyileşene kadar beklenir. Diğer hayvanlarda ise ısırığın üzerinden 12 ay geçene kadar beklenir. Kan bağışı sırasında yaranın iyileşmiş olması gereklidir. Kuduz aşısı olmuşsa 12 ay kan bağışçısı olamaz. Kuduz immünglobülini kullanmışsa 12 ay kan bağışçısı olamaz. Aşılama sonrası hayvanın kuduz olmadığı anlaşılırsa; kişi bağış için kabul edilir.",
