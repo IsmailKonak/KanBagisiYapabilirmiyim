@@ -2,10 +2,9 @@ var question_num = 0;
 
 const questions = [
 "Kendinizi iyi ve sağlıklı hissediyor musunuz?",
-"18 yaşından büyük ve 65 yaşından küçük müsünüz?",
+"18 yaşından büyük ve 60 yaşından küçük müsünüz?",
 "Vücut ağırlığınız 50 kilogramın üzerinde mi?",
 "Yaptığınız en son kan bağışının üzerinden erkekseniz 3 ay veya daha fazla, kadınsanız 4 ay veya daha fazla süre geçti mi?",
-"Kanama/pıhtılaşma faktörleri ile ilgili değerleriniz normal referans aralığında mı?",
 "MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öykünüz var mı?",
 "Kronik bronşit, kronik böbrek ve karaciğer yetmezliğiniz var mı?",
 "Siroz, epilepsi gibi süregelen hastalıklara sahip misiniz?",
@@ -14,8 +13,6 @@ const questions = [
 "Otoimmün bir hastalığa sahip misiniz?",
 "Hepatit B, Hepatit C, Sifiliz veya HIV (AIDS) geçmişiniz var mı?",
 "Kanser ve kemoterapi/radyoterapi öykünüz var mı?",
-"Son 4 hafta içerisinde Attenüe bakteri ve virüs aşısı (Suçiçeği, sarıhumma, kızamık, kızamıkçık, oral polio, kabakulak) oldunuz mu?",
-"Son 1 hafta içerisinde Hepatit B aşısı oldunuz mu?",
 "Son 12 saat içerisinde alkol tükettiniz mi?",
 "Son 48 saat içerisinde antibiyotik aldınız mı?",
 "Ateş, grip benzeri; 38 °C üstü ateşle giden grip benzeri tablolarda semptomların bitimi üzerinden 2 hafta geçti mi?",
@@ -31,14 +28,13 @@ const questions = [
 "Son 12 ay içerisinde cerrahi bir operasyon geçirdiniz mi?",
 "Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?"
 ]
-const true_answers = [true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
+const true_answers = [true,true,true,true,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
 
 const false_explanation = [
 "Kan bağışı yapmadan önce kendinizi iyi ve sağlıklı hissetmeniz gerekmektedir.",
 "18-65 yaş aralığındaki bireyler kan bağışçısı adayı olabilir. (19 yaşından gün almak, 65’ini doldurmamak gerekir.) İlk kez kan bağışında bulunacaklar için üst yaş sınırı: 61 yaşından gün almamış olmalı. Düzenli kan bağışçıları için üst yaş sınırı 65 yaşını doldurduktan, 70 yaşından gün alana kadar kan bağış merkezi doktorunun onayı olmak şartıyla yılda en fazla 1 kez olmak üzere kan bağışlayabilir. ",
 "Kan bağışçısı adayı olabilmek için 50 kilogramın üzerinde olmanız gerekmektedir.",
 "Tam kan bağışında; erkekler 90 günde bir, kadınlar 120 günde bir kan bağışında bulunabilir.",
-"Kanama/pıhtılaşma faktörleri ile ilgili değerleriniz normal referans aralığının dışında olması durumunda kan bağışçısı olamazsınız.",
 "MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öyküsü olan hastalar donör kabul edilmez.",
 "Kronik bronşit,kronik böbrek ve karaciğer yetmezliğine sahip bireyler donör olarak kabul edilmezler.",
 "Siroz,epilepsi gibi süregelen hastalıklara sahip bireyler kan bağışçısı olamazlar.",
@@ -47,8 +43,6 @@ const false_explanation = [
 "Otoimmün hastalığı olanlar kan bağışçısı olamazlar.",
 "Hepatit B, Hepatit C, Sifiliz veya HIV (AIDS) geçmişi olanlar hiçbir zaman donör olamazlar.",
 "Geçmişte kanser ve kemoterapi/radyoterapi öyküsü bulunan bireylerin kan vermesi sakıncalıdır.",
-"Attenüe bakteri ve virüs aşısı yapılmış olanlar: 4 hafta kan veremez.(Suçiçeği, sarıhumma, kızamık, kızamıkçık, oral polio, kabakulak) Ölü bakteri aşısı olanlar, kişi iyi ise kabul edilir.",
-"Hepatit B aşısı olanlar: Yalancı pozitifliği engellemek için 1 hafta süre ile kan alınmaz.",
 "Alkol Kullanımı; Kan bağışçısı alkolün etkisinde olmamalıdır. Alkol alımını takiben 12 saat sonra kan verebilir.",
 "Antibiyotik kullanımı: Son antibiyotik kullanımını takiben 48 saat sonra donör olabilir.",
 "Ateş, grip benzeri; 38 °C üstü ateşle giden grip benzeri tablolarda semptomların bitimini izleyen 2 hafta sonra kan bağışı kabul edilir.",
@@ -97,6 +91,9 @@ function nextquestion(answer){
             update_page(question_num,"Evet","Hayır");
             if (question_num == 17){
               document.getElementById("soru_aciklama").innerHTML = "Eğer son 2 hafta içerisinde ateş ve grip semptomları gösteren bir hastalık geçirmediyseniz 'Evet' e basabilirsiniz.";
+            }
+            if (question_num == 2){
+              document.getElementById("soru_aciklama").innerHTML = "Eğer ki düzenli kan bağışçısı iseniz 60 yerine 65 yaşına kadar da kan bağışında bulunabilirsiniz.";
             }
         }
         else {
