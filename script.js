@@ -92,7 +92,7 @@ function nextquestion(answer){
             if (question_num == 17){
               document.getElementById("soru_aciklama").innerHTML = "Eğer son 2 hafta içerisinde ateş ve grip semptomları gösteren bir hastalık geçirmediyseniz 'Evet' e basabilirsiniz.";
             }
-            if (question_num == 2){
+            if (question_num == 1){
               document.getElementById("soru_aciklama").innerHTML = "Eğer ki düzenli kan bağışçısı iseniz 60 yerine 65 yaşına kadar da kan bağışında bulunabilirsiniz.";
             }
         }
