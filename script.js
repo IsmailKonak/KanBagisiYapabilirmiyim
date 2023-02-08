@@ -89,7 +89,7 @@ function nextquestion(answer){
     else{
         if (answer == true_answers[question_num-1]){
             update_page(question_num,"Evet","Hayır");
-            if (question_num == 17){
+            if (question_num == 14){
               document.getElementById("soru_aciklama").innerHTML = "Eğer son 2 hafta içerisinde ateş ve grip semptomları gösteren bir hastalık geçirmediyseniz 'Evet' e basabilirsiniz.";
             }
             if (question_num == 1){
