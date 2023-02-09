@@ -54,9 +54,10 @@ const false_explanation = [
 "Diş tedavisi kaplama tedavisi, diş çekimi veya yapılan her türlü diş müdahaleleri sırasında kanama oluşmuşsa en az 7 gün süre ile kan bağışı ertelenir.",
 "Dolgu tedavisi ya da diş taşı temizliği gibi yüzeysel müdahalelerde kanama yoksa 1 gün süre ile kan bağışı ertelenir.",
 "Son birkaç gün içerisinde tansiyon düşüklüğü ve bağlı semptomlar gösteren hastaların donörlüğü tehlikeye girebilir.",
-"Sıtma; tedavinin sağlanmasından 3 yıl sonra kan verebilirler.",
 "Cerrahi: ameliyatlardan sonra 1 yıl boyunca kan bağışı alınmaz.",
-"Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar."
+"Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar.",
+"Sıtma; tedavinin sağlanmasından 3 yıl sonra kan verebilirler."
+
 ];
 function exit_page(message,question_num){
     document.getElementById("soru_baslik").innerHTML = message;
