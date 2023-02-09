@@ -26,7 +26,8 @@ const questions = [
 "Son birkaç gün içerisinde baş ağrısı/dönmesi yaşadınız mı?",
 "Son 12 ay içerisinde büyük veya küçük bir cerrahi operasyon geçirdiniz mi?",
 "Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?",
-"Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?"
+"Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
+
 ]
 const true_answers = [true,true,true,true,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
 
@@ -57,7 +58,6 @@ const false_explanation = [
 "Cerrahi: ameliyatlardan sonra 1 yıl boyunca kan bağışı alınmaz.",
 "Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar.",
 "Sıtma; tedavinin sağlanmasından 3 yıl sonra kan verebilirler."
-
 ];
 function exit_page(message,question_num){
     document.getElementById("soru_baslik").innerHTML = message;
@@ -80,16 +80,17 @@ function update_page(question_num,evet,hayir){
 //update_page(question_num);
 
 function nextquestion(answer){
+    //console.log(true_answers.length);
+    //console.log(questions.length);
+    //console.log(false_explanation.length);
     if (question_num == 0){
         update_page(question_num,"Evet","Hayır")
     }
-    else if (question_num == questions.length){
-        document.getElementById("soru_baslik").innerHTML = "Tebrikler kan bağışı yapmak için adaysınız";
-        document.getElementById("soru_aciklama").innerHTML = "Testteki sorulara verdiğiniz cevaplara bakılarak muhtemelen kan bağışı yapmanız önünde herhangi bir engel bulunmamaktadır. En doğru bilgiyi Kızılay çadırlarında görevlilerinden alabilirsiniz.";
-        document.getElementById("evet_but").style.display = "none";
-        document.getElementById("hayir_but").style.display = "none";
-    }
-    else{
+    
+    else if (question_num != 0){
+        console.log("Soru:",question_num)
+        console.log("cevap: " +true_answers[question_num-1])
+        console.log("kullanici: "+answer)
         if (answer == true_answers[question_num-1]){
             update_page(question_num,"Evet","Hayır");
             if (question_num == 14){
@@ -97,6 +98,12 @@ function nextquestion(answer){
             }
             if (question_num == 1){
               document.getElementById("soru_aciklama").innerHTML = "Eğer ki düzenli kan bağışçısı iseniz 60 yerine 65 yaşına kadar da kan bağışında bulunabilirsiniz.";
+            }
+            if (question_num == questions.length){
+                document.getElementById("soru_baslik").innerHTML = "Tebrikler kan bağışı yapmak için adaysınız";
+                document.getElementById("soru_aciklama").innerHTML = "Testteki sorulara verdiğiniz cevaplara bakılarak muhtemelen kan bağışı yapmanız önünde herhangi bir engel bulunmamaktadır. En doğru bilgiyi Kızılay çadırlarında görevlilerinden alabilirsiniz.";
+                document.getElementById("evet_but").style.display = "none";
+                document.getElementById("hayir_but").style.display = "none";
             }
         }
         else {
