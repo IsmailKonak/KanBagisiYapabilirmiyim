@@ -23,13 +23,12 @@ const questions = [
 "En son diare/ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
 "Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi?",
 "Son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
-"Son birkaç gün içerisinde baş ağrısı/dönmesi yaşadınız mı?",
 "Son 12 ay içerisinde büyük veya küçük bir cerrahi operasyon geçirdiniz mi?",
 "Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?",
 "Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
 
 ]
-const true_answers = [true,true,true,true,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
+const true_answers = [true,true,true,true,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false];
 
 const false_explanation = [
 "Kan bağışı yapmadan önce kendinizi iyi ve sağlıklı hissetmeniz gerekmektedir.",
@@ -54,7 +53,6 @@ const false_explanation = [
 "Diyare-İshal: Tam iyileşme ve semptomların bitimini takiben 3 gün beklenir.",
 "Diş tedavisi kaplama tedavisi, diş çekimi veya yapılan her türlü diş müdahaleleri sırasında kanama oluşmuşsa en az 7 gün süre ile kan bağışı ertelenir.",
 "Dolgu tedavisi ya da diş taşı temizliği gibi yüzeysel müdahalelerde kanama yoksa 1 gün süre ile kan bağışı ertelenir.",
-"Son birkaç gün içerisinde tansiyon düşüklüğü ve bağlı semptomlar gösteren hastaların donörlüğü tehlikeye girebilir.",
 "Cerrahi: ameliyatlardan sonra 1 yıl boyunca kan bağışı alınmaz.",
 "Endoskopik ve Kolonoskopik muayene yaptıran kişiler 12 ay süre ile kan bağışı yapamazlar.",
 "Sıtma; tedavinin sağlanmasından 3 yıl sonra kan verebilirler."
