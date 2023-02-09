@@ -23,7 +23,7 @@ const questions = [
 "En son diare/ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
 "Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi?",
 "Son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
-"Son 12 ay içerisinde büyük veya küçük bir cerrahi operasyon geçirdiniz mi?",
+"Son 12 ay içerisinde küçük veya büyük bir cerrahi operasyon geçirdiniz mi?",
 "Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?",
 "Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
 
