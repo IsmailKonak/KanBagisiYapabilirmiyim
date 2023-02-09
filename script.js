@@ -6,7 +6,7 @@ const questions = [
 "Vücut ağırlığınız 50 kilogramın üzerinde mi?",
 "Yaptığınız en son kan bağışının üzerinden erkekseniz 3 ay veya daha fazla, kadınsanız 4 ay veya daha fazla süre geçti mi?",
 "MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öykünüz var mı?",
-"Kronik bronşit, kronik böbrek ve karaciğer yetmezliğiniz var mı?",
+"Kronik böbrek veya karaciğer yetmezliğiniz var mı?",
 "Siroz, epilepsi gibi süregelen hastalıklara sahip misiniz?",
 "Genel olarak tansiyon düşüklüğü ve buna bağlı semptomlarınız; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik gibi şikayetleriniz var mı?",
 "Diyabet hastası mısınız?",
@@ -20,13 +20,13 @@ const questions = [
 "Son 12 ay içerisinde akupunktur, botoks, takı için cilt deldirme, saç ekimi veya estetik müdahaleler yaptırdınız mı?",
 "Son 12 ay içerisinde dövme, hacamat yaptırdınız mı?",
 "Son 12 ay içerisinde hayvan ısırığı nedeni ile kuduz aşısı oldunuz mu?",
-"Son diare/ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
+"En son diare/ishal geçmişiniz üzerinden 3 gün veya daha fazla süre geçti mi?",
 "Son 7 gün içerisinde diş müdahalesi sonucunda kanama gerçekleşti mi?",
 "Son 1 gün içerisinde dolgu tedavisi, diş taşı temizliği gibi yüzeysel müdahaleler yapıldı mı?",
 "Son birkaç gün içerisinde baş ağrısı/dönmesi yaşadınız mı?",
-"Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?",
-"Son 12 ay içerisinde cerrahi bir operasyon geçirdiniz mi?",
-"Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?"
+"Son 12 ay içerisinde büyük veya küçük bir cerrahi operasyon geçirdiniz mi?",
+"Son 12 ay içerisinde endoskopik veya kolonoskopik muayene yaptırdınız mı?",
+"Son 3 yıl içerisinde sıtma hastalığına yakalandınız mı?"
 ]
 const true_answers = [true,true,true,true,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,false,false];
 
@@ -36,7 +36,7 @@ const false_explanation = [
 "Kan bağışçısı adayı olabilmek için 50 kilogramın üzerinde olmanız gerekmektedir.",
 "Tam kan bağışında; erkekler 90 günde bir, kadınlar 120 günde bir kan bağışında bulunabilir.",
 "MI (kalp krizi), kalp yetmezliği, kalp kapakçık anomalisi, ritim bozukluğu ve stent/by pass öyküsü olan hastalar donör kabul edilmez.",
-"Kronik bronşit,kronik böbrek ve karaciğer yetmezliğine sahip bireyler donör olarak kabul edilmezler.",
+"Kronik böbrek ve karaciğer yetmezliğine sahip bireyler donör olarak kabul edilmezler.",
 "Siroz,epilepsi gibi süregelen hastalıklara sahip bireyler kan bağışçısı olamazlar.",
 "Genel olarak tansiyon düşüklüğü ve buna bağlı semptomları; baş ağrısı, baş dönmesi, senkop(bayılma), halsizlik yaşamanız durumunda donör olmanız tehlikeye girebilir, bu konuda uzmanlara danışınız.",
 "Diyabet(şeker hastalığı):İnsulin kullanıyorsa kan bağışçısı olamazlar",
@@ -71,7 +71,9 @@ function update_page(question_num,evet,hayir){
     document.getElementById("evet_but").innerHTML = evet;
     document.getElementById("hayir_but").style.display = "inline";
     document.getElementById("hayir_but").style.display = hayir;
+    document.getElementById("soru_aciklama1").style.display = "none";
     document.getElementById("soru_aciklama2").style.display = "none";
+    document.getElementById("soru_aciklama3").style.display = "none";
 }
 
 //update_page(question_num);
